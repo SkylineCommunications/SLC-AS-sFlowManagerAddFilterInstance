@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal", "Internal", "{3F4B191F-477F-4F5C-B40C-4A36394AB6A7}"
+	ProjectSection(SolutionItems) = preProject
+		Internal\.editorconfig = Internal\.editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{53E96E57-D8CF-48C5-9BC7-9D268159D4D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{1E2112C5-8D1A-46F0-AECC-1E8597B408CF}"
+	ProjectSection(SolutionItems) = preProject
+		Dlls\ABOUT.md = Dlls\ABOUT.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompanionFiles", "CompanionFiles", "{136E2585-F00A-4BFF-86B6-A0AB3C4102B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Skyline DataMiner", "Skyline DataMiner", "{EE54A32A-0626-4B11-8E79-9184848413E7}"
+	ProjectSection(SolutionItems) = preProject
+		CompanionFiles\Skyline DataMiner\AboutThisFolder.md = CompanionFiles\Skyline DataMiner\AboutThisFolder.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{D0A5EE5B-70A7-4559-99D3-CD293D690702}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\ABOUT.md = Documentation\ABOUT.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F8938D60-51A0-4880-9CFC-19C66379BB5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Analysis", "Code Analysis", "{7116DC37-DFEF-4A43-A6F1-08391356CBCD}"
+	ProjectSection(SolutionItems) = preProject
+		Internal\Code Analysis\qaction-debug.ruleset = Internal\Code Analysis\qaction-debug.ruleset
+		Internal\Code Analysis\qaction-release.ruleset = Internal\Code Analysis\qaction-release.ruleset
+		Internal\Code Analysis\stylecop.json = Internal\Code Analysis\stylecop.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SLC-AS-sFlowManagerAddFilterInstance", "SLC-AS-sFlowManagerAddFilterInstance", "{735727F3-0F5A-431D-AD96-E508DFECBBE9}"
+	ProjectSection(SolutionItems) = preProject
+		SLC-AS-sFlowManagerAddFilterInstance.xml = SLC-AS-sFlowManagerAddFilterInstance.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{B06A3358-68C4-4DB9-85A8-3B9E28C30097}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SLC-AS-sFlowManagerAddFilterInstance_1", "SLC-AS-sFlowManagerAddFilterInstance_1\SLC-AS-sFlowManagerAddFilterInstance_1.csproj", "{2E54EC74-D082-4524-B54A-007BB0C6298F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E54EC74-D082-4524-B54A-007BB0C6298F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E54EC74-D082-4524-B54A-007BB0C6298F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E54EC74-D082-4524-B54A-007BB0C6298F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E54EC74-D082-4524-B54A-007BB0C6298F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE54A32A-0626-4B11-8E79-9184848413E7} = {136E2585-F00A-4BFF-86B6-A0AB3C4102B8}
+		{7116DC37-DFEF-4A43-A6F1-08391356CBCD} = {3F4B191F-477F-4F5C-B40C-4A36394AB6A7}
+		{735727F3-0F5A-431D-AD96-E508DFECBBE9} = {53E96E57-D8CF-48C5-9BC7-9D268159D4D7}
+		{B06A3358-68C4-4DB9-85A8-3B9E28C30097} = {735727F3-0F5A-431D-AD96-E508DFECBBE9}
+		{2E54EC74-D082-4524-B54A-007BB0C6298F} = {B06A3358-68C4-4DB9-85A8-3B9E28C30097}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0140CF8-9E02-4A04-9116-650CBCCA25B6}
+	EndGlobalSection
+EndGlobal
