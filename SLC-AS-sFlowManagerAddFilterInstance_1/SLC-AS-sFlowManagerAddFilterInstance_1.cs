@@ -64,6 +64,7 @@ namespace SLC_AS_sFlowManagerAddFilterInstance_1
     using System.Text;
     using Skyline.DataMiner.Automation;
     using Messages;
+    using Newtonsoft.Json;
 
     /// <summary>
     /// Represents a DataMiner Automation script.
@@ -141,6 +142,7 @@ namespace SLC_AS_sFlowManagerAddFilterInstance_1
 
                 return Actions.Finished;
             }
+
             private Actions Configure()
             {
                 var uir = new UIResults();
@@ -166,6 +168,7 @@ namespace SLC_AS_sFlowManagerAddFilterInstance_1
                         filterDefinitionDropdown.AddDropDownOption("Select Filter Definition");
                         filterDefinitionDropdown.AddDropDownOption("------------------------");
                     }
+
                     foreach (var filterDefinition in filterDefinitions.OrderBy(f => f))
                         filterDefinitionDropdown.AddDropDownOption(filterDefinition);
                     uib.AppendBlock(filterDefinitionDropdown);
@@ -251,15 +254,15 @@ namespace SLC_AS_sFlowManagerAddFilterInstance_1
 
                 return Actions.Configure;
             }
+
             private Actions Create()
             {
-                sFlowManager.SetParameter(ExternalRequestPID, new FilterUpdateMessage
+                sFlowManager.SetParameter(ExternalRequestPID, JsonConvert.SerializeObject(new FilterUpdateMessage
                 {
                     Name = filter.Name,
                     Definition = filter.FilterDefinition.Name,
-                    OverriddenValues = filter.OverridenValues
-
-                });
+                    OverriddenValues = filter.OverridenValues,
+                }));
 
                 return Actions.Finished;
             }
@@ -270,7 +273,9 @@ namespace SLC_AS_sFlowManagerAddFilterInstance_1
         public class Filter
         {
             public string Name { get; set; }
+
             public FilterDefinition FilterDefinition { get; set; }
+
             public Dictionary<string, string> OverridenValues { get; set; }
 
             public bool IsFullyConfigured()
